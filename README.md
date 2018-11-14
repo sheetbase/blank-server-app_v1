@@ -1,4 +1,4 @@
-# Sheetbase App: @sheetbase/blank-server-app
+# Sheetbase Blank Server App
 
 Blank template for building Sheetbase server app.
 
