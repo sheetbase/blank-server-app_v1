@@ -3,12 +3,9 @@
     "version": "0.0.1",
     "description": "Blank template for building Sheetbase server app.",
     "scripts": {
-        "buil": "sheetbase-app-scripts build --app",
-        "deploy": "sheetbase-app-scripts deploy",
+        "buil": "sheetbase-app-scripts build",
         "lint": "tslint --project tslint.json && echo 'All files pass linting.'",
-        "transpile-test": "tsc --project tests/tsconfig.test.json",
-        "run-test": "nyc --cache false mocha --timeout 100000 -- build/tests/*.js",
-        "test": "npm run transpile-test && npm run run-test"
+        "test": "tsc --project tests/tsconfig.test.json && nyc --cache false mocha --timeout 100000 -- build/tests/*.js"
     },
     "repository": {
         "type": "git",
@@ -18,10 +15,10 @@
         "url": "https://github.com/sheetbase/blank-server-app/issues"
     },
     "dependencies": {
-        "@sheetbase/core-server": "~0.0.13"
+        "@sheetbase/core-server": "~0.0.19"
     },
     "devDependencies": {
-        "@sheetbase/app-scripts": "^0.0.28",
+        "@sheetbase/app-scripts": "^0.0.30",
         "@types/chai": "^4.1.7",
         "@types/google-apps-script": "^0.0.31",
         "@types/mocha": "^5.2.5",
@@ -29,6 +26,7 @@
         "chai": "^4.2.0",
         "mocha": "^5.2.0",
         "nyc": "^13.1.0",
+        "rollup-plugin-node-resolve": "^4.0.0",
         "tslint": "^5.11.0",
         "typescript": "^3.1.6"
     }
