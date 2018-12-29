@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "Blank template for building Sheetbase server app.",
     "scripts": {
-        "buil": "sheetbase-app-scripts build",
+        "build": "sheetbase-app-scripts build",
         "lint": "tslint --project tslint.json && echo 'All files pass linting.'",
         "test": "tsc --project tests/tsconfig.test.json && nyc --cache false mocha --timeout 100000 -- build/tests/*.js"
     },
