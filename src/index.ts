@@ -1,9 +1,11 @@
-import { sheetbase } from '@sheetbase/core-server';
+import { sheetbase } from '@sheetbase/server';
 
-import homeRoutes from './routes/index';
+import appRoutes from './routes/index';
 
-export const Sheetbase = sheetbase({
+const Sheetbase = sheetbase({
     allowMethodsWhenDoGet: true, // for dev, should remove when in production
 });
 
-homeRoutes();
+appRoutes();
+
+export { Sheetbase };
